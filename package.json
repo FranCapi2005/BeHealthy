@@ -12,7 +12,10 @@
     "boxicons": "2.1.4",
     "ejs": "^3.1.10",
     "express": "^4.21.0",
-    "lightweight-charts": "^4.2.0",
+    "lightweight-charts": "^4.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
     "nodemon": "^3.1.7"
   }
 }
