@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="/css/partials/menu.css">
+
+<header>
+      <div class="off-screen-menu">
+          <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">Devices</a></li>
+          </ul>
+        </div>
+      
+      <nav class="nav-bar">
+          <div class="container__dropdownMenu">
+              <div class="ham-menu">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+              
+              <a href="/">
+                <div class="container__brandText">
+                  <span class="element--brand">Fitness App</span>
+                </div>
+              </a>
+          </div>
+
+
+          <div class="container__topMenu">
+              <ul class="list__menu">
+                  <li class="list--item item"><span class="text--menu">Francisco</span></li>
+              </ul>
+
+              <div class="container__avatarImg">
+                <button class="openUser--modal">
+                  <i class="fa-solid fa-user"></i>
+                </button>
+                <img class="avatar--img" src="/img/avatar.jpg" alt="">
+              </div>
+          </div>
+      </nav>
+
+      <dialog id="modalWindow">
+        <div class="container__cardsUser">
+          <a href="/user/register">
+            <div class="container__modal--optionReg">
+              <span class="title--modal">¿Aun no eres parte de la Comunidad?</span>
+              <div class="btn--modalSection">
+                <span>Registrarse</span>
+                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+              </div>
+            </div>
+          </a>
+          
+          <a href="/user/login">
+            <div class="container__modal--optionLog">
+              <span class="title--modal">¡Accede a tu cuenta!</span>
+              <div class="btn--modalSection">
+                <span>Iniciar Sesion</span>
+                <i class="fa-solid fa-user"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+        <button class="closeUser--modal"><i class="fa-solid fa-xmark"></i></button>
+      </dialog>
+
+  </header>
+<body>
+
+<script src="/js/menu.js"></script>
