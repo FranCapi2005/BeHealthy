@@ -1,0 +1,32 @@
+<%- include('../partials/head.ejs') %>
+
+<link rel="stylesheet" href="/css/users/log.css">
+
+<%- include('../partials/header.ejs') %>
+
+<main>
+    <form id="login-form">
+        <h2>Login to Your Fitness Journey</h2>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="off">
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="off">
+        </div>
+        
+        <div class="form-group">
+            <input type="submit" value="Login">
+            <a href="/user/forgot-password" class="forgot-password">Forgot Password?</a>
+        </div>
+        
+        <p class="or">or</p>
+        
+        <div class="social-login">
+            <a href="#" class="facebook-login">Login with Facebook</a>
+            <a href="#" class="google-login">Login with Google</a>
+        </div>
+    </form>
+</main>

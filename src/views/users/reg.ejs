@@ -1,0 +1,39 @@
+<%- include('../partials/head.ejs') %>
+
+<link rel="stylesheet" href="/css/users/reg.css">
+
+<%- include('../partials/header.ejs') %>
+
+<main>
+    <div class="container__userConnection">
+        <form id="register-form">
+            <h2>Join the Fitness Community</h2>
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="off">
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" autocomplete="off">
+            </div>
+        
+            <div class="form-group">
+                <input type="submit" value="Register">
+            </div>
+        
+           <p class="terms">By registering, you agree to our <a href="#" class="terms-link">Terms and Conditions</a></p>
+        </form>
+    </div>
+</main>
