@@ -1,0 +1,76 @@
+/* ------------- Login -------------  */
+#login-form {
+    width: 90%;
+    margin: 15px auto;
+    padding: 20px 30px 20px 30px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 1.7s ease;
+}
+
+#login-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #333;
+    font-size: 18px;
+}
+  
+#login-form .form-group {
+    margin-bottom: 15px;
+    position: relative;
+    width: 100%;
+}
+  
+#login-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+}
+  
+#login-form input[type="text"], #login-form input[type="password"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+  
+#login-form input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #6F86FF;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+}
+  
+#login-form input[type="submit"]:hover {background-color: #41509e;}
+  
+#login-form .forgot-password {
+    float: right;
+    font-size: 14px;
+    color: #6F86FF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 16px;
+}
+  
+#login-form .forgot-password:hover {color: #41509e;}
+
+

@@ -1,0 +1,248 @@
+/* ------------- Header -------------  */
+body.no-scrollBar{overflow: hidden;}
+
+header{position: relative;}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+}
+
+.container__dropdownMenu, .container__topMenu{
+    max-height: 68px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1 1;
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: .5rem;
+    margin: 15px 8px;
+    transition: background-color .7s ease;
+}
+
+.container__dropdownMenu{max-width: 150px;}
+
+.container__topMenu{
+    justify-content: end;
+    flex: 3 1;
+    margin: 15px 10px;
+    padding: 0;
+}
+
+.container__dropdownMenu:hover, .container__dropdownMenu:hover .element--brand{background-color: #6F86FF;}
+
+.container__dropdownMenu:hover .element--brand{color: #fff;}
+
+.element--brand{
+    color: #222;
+    margin: 0 0 0 3px;
+    font-size: 16px;
+    background-color: #fff;
+    transition: background-color .7s, color .3s ease;
+}
+
+.container__brandText{text-align: center;}
+
+
+
+.list__menu{display: flex;}
+
+.container__avatarImg{
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.avatar--img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+}
+
+.list--item .text--menu{color: #222;}
+
+.list__menu .item{
+    padding: 20px 20px;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom .4s, background-color .4s ease;
+    cursor: pointer;
+}
+
+.list__menu .item:hover{
+    background-color: #6F86FF60;
+    border-bottom: 3px solid #6F86FF;
+}
+
+
+/* ------------- Ventana Modal Usuario -------------  */
+.openUser--modal{
+    padding: 17px;
+    font-size: 22px;
+    color: #222;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}
+
+#modalWindow{
+    width: 80%;
+    position: absolute;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 25px;
+    z-index: 100;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation-duration: 2s;
+    animation-name: modal-animShow
+}
+
+#modalWindow a{
+    text-decoration: none;
+    color: #222;
+    transition: color 1s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+#modalWindow a:focus{outline: none;}
+
+#modalWindow::backdrop{background-color: #22222287;}
+
+#modalWindow a:hover .container__modal--optionLog, #modalWindow a:hover .container__modal--optionReg{background-color: #eee;}
+
+.closeUser--modal{
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    position: absolute;
+    color: #6F86FF;
+    background-color: inherit;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.container__modal--optionLog, .container__modal--optionReg{
+    background-color: #6F86FF80;
+    width: 190px;
+    height: 200px;
+    padding: 30px 10px 10px 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .5s ease;
+    border: .1px solid #888;
+}
+
+.container__cardsUser{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.title--modal{
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.btn--modalSection{
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    bottom: 60px;
+}
+
+.btn--modalSection i{
+    font-size: 24px;
+}
+
+
+/* ------------- Burger Menu ------------- */
+.off-screen-menu{
+    background-color: #eee;
+    height: 100vh;
+    width: 100%;
+    max-width: 420px;
+    position: fixed;
+    left: -450px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+    font-size: 1.9rem;
+    transition: .4s ease;
+    z-index: 2;
+    border: 3px solid #ddd;
+}
+
+.off-screen-menu.active{left: 0;}
+
+.off-screen-menu a{
+    color: #222;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.off-screen-menu a:hover{color: #6F86FF;}
+
+.ham-menu{
+    height: 50px;
+    width: 50px;
+    margin: auto;
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.ham-menu span{
+    height: 5px;
+    width: 72%;
+    background-color: #6F86FF;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+
+.container__dropdownMenu:hover span{background-color: #eee;}
+
+.ham-menu.active:hover span{background-color: #6F86FF;}
+
+.ham-menu span:nth-child(1){top: 25%;}
+
+.ham-menu span:nth-child(3){top: 75%;}
+
+.ham-menu.active span:nth-child(1){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.ham-menu.active span:nth-child(2){opacity: 0;}
+
+.ham-menu.active span:nth-child(3){
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* ------------- Animation -------------  */
+@keyframes modal-animShow{
+    from {left: -500px;}
+    to {left: 0;}
+}
