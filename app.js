@@ -36,8 +36,14 @@ app.use("/admin", adminRouter)
 
 
 // ------------ Listen Server ------------ \\
-const port = process.env.PORT
+const port = process.env.PORT || 3030
 
 app.listen(`${port}`, () => {
 	console.log(`Servidor funcionando en: http://localhost:${port}`);
 });
+
+
+/* ARREGLAR MODAL */
+/* ARREGLAR BOTON DE LOGIN WITH "FACEBOOK" || "GOOGLE" */
+/* ARREGLAR RESPONSIVE DEL FOOTER */
+/* ARREGLAR RESPONSIVE EN 320px HEADER */
