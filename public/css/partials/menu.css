@@ -98,7 +98,7 @@ header{position: relative;}
     border-radius: 8px;
     z-index: 100;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-name: modal-animShow
 }
 
@@ -261,9 +261,9 @@ header{position: relative;}
 /* ------------- Animation -------------  */
 @keyframes modal-animShow{
     from {
-        left: -350px;
+        opacity: 0.2;
     }
     to {
-        left: 0;
+        opacity: 1;
     }
 }

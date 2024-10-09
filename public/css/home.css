@@ -4,10 +4,13 @@
     flex-direction: row;
 }
 
+.section__first{
+    margin: 8px;
+}
+
 .section__first, .container__first--subSection, .container__second--subSection{
     background-color: #fff;
     border-radius: 8px;
-    margin: 10px;
     padding: .5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: 1px solid #ddd;
@@ -15,11 +18,13 @@
 
 .container__first--subSection{
     padding: 10px auto;
+    margin: 4px 4px 4px 8px;
     flex: 2 2;
     height: 200px;
 } 
 .container__second--subSection{
     padding: 10px auto;
+    margin: 4px 8px 4px 4px;
     flex: 1 1;
 }
 

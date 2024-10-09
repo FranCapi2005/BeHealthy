@@ -4,6 +4,14 @@ const path = require("path")
 
 const app = express();
 
+/* async function loadModule(){
+	const modulePath = path.resolve(__dirname, "module.js");
+	const module = await import(modulePath);
+
+	module.searchUrl();
+}
+
+loadModule(); */
 
 // ------------ .env Require ------------ \\
 require("dotenv").config()
@@ -36,8 +44,8 @@ app.use("/admin", adminRouter)
 
 
 // ------------ Listen Server ------------ \\
-const port = process.env.PORT
+const port = process.env.PORT || 3040
 
 app.listen(`${port}`, () => {
-	console.log(`Servidor funcionando en: http://localhost:${port}`);
+	console.log(`Servidor funcionando en: http://localhost:${3040}`);
 });

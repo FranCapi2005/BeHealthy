@@ -13,6 +13,8 @@ footer{
 .container__firstInfo--footer, .container__secondInfo--footer, .container__thirdInfo--footer{
     margin: 20px 10px 10px 10px;
     text-align: center;
+    flex: 1 1;
+    flex-wrap: wrap;
 }
 
 .container__info{
@@ -29,8 +31,31 @@ footer{
     align-items: center;
 }
 
+.header__sectionText{font-size: 19x;}
+
 .copyright--text{font-size: 14px;}
 
-.slogan--text{font-size: 13px; margin-bottom: 14px;}
+.slogan--text{
+    font-size: 13px; 
+    margin-bottom: 14px;
+    font-style: italic;
+}
 
-.brand--text{font-size: 16px; margin-bottom: 3px;}
+.brand--text{
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+/* 
+.link--itemFooter{
+    margin: 2px 0;
+    color: #222;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: color .4s, background-color .4s, border .4s ease;
+}
+
+.link--itemFooter:hover{
+    color: #fff;
+    border: 2px solid #ddd;
+    background-color: #6F86FF;
+} */
