@@ -1,14 +1,7 @@
-/* ------------- General -------------  */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
-
 /* ------------- Register -------------  */
-#register-form {
-    width: 90%;
+#login-form {
+    width: 70%;
+    height: 85vh;
     margin: 15px auto;
     padding: 20px 30px 20px 30px;
     border: 1px solid #ddd;
@@ -19,63 +12,172 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-#register-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #333;
-    font-size: 18px;
-}
-  
-#register-form .form-group {
-    margin-bottom: 15px;
-    position: relative;
+input{outline: none; transition: box-shadow .4s ease;}
+
+input:focus-visible{outline: 2px solid #5F41E4;}
+
+.container__name:focus-within #user{color: #5F41E4;}
+.container__lastname:focus-within #userLast{color: #5F41E4;}
+.container__telephone:focus-within i{color: #5F41E4;}
+.container__email:focus-within i{color: #5F41E4;}
+.container__password:focus-within i{color: #5F41E4;}
+
+input:focus{box-shadow: 0 0 10px #5F41E4;}
+
+.container__submit{width: 90%;}
+
+.container__inputs{
     width: 100%;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
 }
-  
-#register-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-    font-size: 16px;
-}
-  
-#register-form input[type="text"], #register-form input[type="email"], #register-form input[type="password"] {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-  
-#register-form input[type="submit"] {
-    width: 100%;
-    height: 40px;
-    background-color: #6F86FF;
+
+.container__submit button{
+    background-color: #5F41E4;
     color: #fff;
-    padding: 8px;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
     border: none;
-    border-radius: 8px;
+    align-items: center;
+    font-size: 14px;
+    transition: box-shadow .7s ease;
+}
+
+.container__submit:hover button{box-shadow: 0 0 20px #5F41E4;}
+
+#email, 
+#password, 
+#telephone, 
+#name, 
+#lastname, 
+#countryCode{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    padding: 5px 5px 5px 35px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+select:focus-visible{outline: none;}
+
+#countryCode{
+    width: 28%;
+    appearance: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
+    padding: 8px;
+    margin-right: 6px;
+    color: #5F41E4;
+    font-size: 12px;
+}
+
+#name{margin-right: 8px;}
+
+.container,
+.container__email, 
+.container__lastname,
+.container__password, 
+.container__telephone, 
+.section-telephone,
+.container__rememberMe{
+    position: relative;
+    margin: 8px 0;
+    height: 40px;
+    width: 90%;
+    display: flex;
     align-items: center;
 }
-  
-#register-form input[type="submit"]:hover {background-color: #41509e;}
-  
-#register-form .login-link {
-    font-size: 14px;
-    color: #6F86FF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 16px;
+
+.container__rememberMe{margin: 0;}
+
+.container__lastname{margin-left: 6px;}
+
+.fa-lock, .fa-envelope, .fa-phone, #user, #userLast{
+    position: absolute;
+    left: 13.5px;
+    top: 27%;
+    color: #bbb;
 }
-  
-#register-form .login-link:hover {color: #41509e;}
+
+.container__logIn--external{
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.container__google, .container__apple{
+    margin: 10px 10px 10px 0;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.container__apple{margin: 10px 0 10px 10px;}
+
+.container__apple button, .container__google button{
+    width: 100%;
+    height: 48px;
+    background-color: #f1eff9a6;
+    border: 2px solid #f1f1f1;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border .7s, border-radius .7s, box-shadow .7s ease;
+}
+
+.container__google:hover button,
+.container__apple:hover button{
+    border: 2px solid #888;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #444;
+}
+
+.imgBtn{width: 30px; margin-right: 15px;}
+
+.redirect__register{margin: 10px 0;}
+
+.separator{
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.line{
+    flex-grow: 1;
+    color: #1116;
+}
+
+.line:first-child{margin: 0 10px 0 0;}
+
+.line:last-child{margin: 0 0 0 10px;}
+
+.remember-label{
+    text-align: center;
+    font-size: 14px;
+    margin-left: 8px;
+}
+
+input[type="checkbox"]:checked + span:before {
+	border-color: #5F41E4;
+}
+
+input[type="checkbox"] + span {
+    font-weight: bold;
+    line-height: 3em;
+    color: #999;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked + span {
+    color: #5F41E4;
+}
+

@@ -1,6 +1,7 @@
 /* ------------- Login -------------  */
 #login-form {
-    width: 90%;
+    width: 70%;
+    height: 75vh;
     margin: 15px auto;
     padding: 20px 30px 20px 30px;
     border: 1px solid #ddd;
@@ -11,66 +12,125 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    transition: background-color 1.7s ease;
+    justify-content: space-evenly;
 }
 
-#login-form h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #333;
-    font-size: 18px;
-}
-  
-#login-form .form-group {
-    margin-bottom: 15px;
-    position: relative;
+input{outline: none; transition: box-shadow .4s ease;}
+
+input:focus-visible{outline: 2px solid #5F41E4;}
+
+.container__email:focus-within i{color: #5F41E4;}
+.container__password:focus-within i{color: #5F41E4;}
+
+input:focus{box-shadow: 0 0 10px #5F41E4;}
+
+.container__submit{width: 90%;}
+
+.container__inputs{
     width: 100%;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
 }
-  
-#login-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-    font-size: 16px;
-}
-  
-#login-form input[type="text"], #login-form input[type="password"] {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-  
-#login-form input[type="submit"] {
-    width: 100%;
-    height: 40px;
-    background-color: #6F86FF;
+
+.container__submit button{
+    background-color: #5F41E4;
     color: #fff;
-    padding: 8px;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-}
-  
-#login-form input[type="submit"]:hover {background-color: #41509e;}
-  
-#login-form .forgot-password {
-    float: right;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
     font-size: 14px;
-    color: #6F86FF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 16px;
+    transition: box-shadow .7s ease;
 }
-  
-#login-form .forgot-password:hover {color: #41509e;}
+
+.container__submit:hover button{
+    box-shadow: 0 0 20px #5F41E4;
+}
 
 
+#email, #password{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    padding: 5px 5px 5px 36px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.container__email, .container__password{
+    position: relative;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.fa-lock, .fa-envelope{
+    position: absolute;
+    left: 13.5px;
+    top: 27%;
+    color: #bbb;
+}
+
+.container__logIn--external{
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.container__google, .container__apple{
+    margin: 10px 10px 10px 0;
+    width: 100%;
+}
+
+.container__apple{margin: 10px 0 10px 10px;}
+
+.container__apple button, .container__google button{
+    width: 100%;
+    height: 48px;
+    background-color: #f1eff9a6;
+    border: 2px solid #f1f1f1;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border .7s, border-radius .7s, box-shadow .7s ease;
+}
+
+.container__google:hover button,
+.container__apple:hover button{
+    border: 2px solid #888;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #444;
+}
+
+.imgBtn{width: 30px; margin-right: 15px;}
+
+.redirect__register{margin: 10px 0;}
+
+.container__forgotPassword{
+    position: relative;
+    height: 50px;
+    width: 90%;
+}
+
+.forgot-password{position: absolute;}
+
+.separator{
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.line{
+    flex-grow: 1;
+    color: #1116;
+}
+
+.line:first-child{margin: 0 10px 0 0;}
+
+.line:last-child{margin: 0 0 0 10px;}

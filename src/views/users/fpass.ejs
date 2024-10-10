@@ -5,22 +5,35 @@
 <%- include('../partials/header.ejs') %>
 
 <main>
-    <form id="reset-password-form">
-        <h2>Resetear contraseña</h2>
-        <div class="form-group">
-        <label for="email">Correo electrónico:</label>
-        <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico">
-        </div>
-        <div class="form-group">
-        <input type="submit" value="Enviar enlace de reseteo">
-        </div>
-        <p class="login-link">¿Ya tiene una cuenta? <a href="#" class="login-link">Iniciar sesión</a></p>
-        <div class="social-login">
-            <a href="#" class="google-login"><i class="fa fa-google"></i></a>
-            <a href="#" class="facebook-login"><i class="fa fa-facebook"></i></a>
-            <a href="#" class="apple-login"><i class="fa-brands fa-apple"></i></a>
-        </div>
-    </form>
+    <main>
+        <form id="login-form">
+            <h2>Reset Password</h2>
+            <div class="container__inputs">    
+                <div class="container__telephone">
+                    <i class="fa-solid fa-phone" id="tel"></i><input type="tel" id="telephone" name="telephone" placeholder="telephone">
+                </div>
+                <div class="separator">
+                    <hr class="line">
+                    <p class="legend-or">or</p>
+                    <hr class="line">
+                </div>
+                <div class="container__email">
+                    <i class="fa-regular fa-envelope" id="envelope"></i><input type="text" id="email" name="email" placeholder="Email adress" autocomplete="off">
+                </div>
+            </div>
+    
+            <div class="container__submit">
+                <button class="button">
+                    <span>Submit</span>
+                    <svg viewBox="0 0 15 13">
+                        <polyline points="2 6.5 6 10.5 13 2.5"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </main>
+    
+    <script src="/js/users/fpass.js"></script>
 </main>
 
 <%- include('../partials/footer.ejs') %>
