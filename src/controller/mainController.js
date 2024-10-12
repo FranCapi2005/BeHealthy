@@ -1,5 +1,4 @@
 const express = require("express")
-const createChart = require("lightweight-charts")
 
 const controller = {
     index: (require, response) => {

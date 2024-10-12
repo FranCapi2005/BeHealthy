@@ -9,3 +9,7 @@ node_modules
 .sass-cache
 
 public/img
+
+src/database
+
+public/js/chartjs

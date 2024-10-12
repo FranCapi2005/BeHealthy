@@ -98,8 +98,8 @@ header{position: relative;}
     border-radius: 8px;
     z-index: 100;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    animation-duration: 2s;
-    animation-name: modal-animShow
+    animation-duration: 2.5s;
+    animation-name: modal-animShow;
 }
 
 #modalWindow a{
@@ -133,7 +133,7 @@ header{position: relative;}
 
 .container__modal--optionLog, .container__modal--optionReg{
     background-color: #6F86FF68;
-    width: 190px;
+    width: 140px;
     height: 200px;
     padding: 30px 10px 10px 10px;
     border-radius: 5px;
@@ -171,6 +171,10 @@ header{position: relative;}
 }
 
 .imgModal{
+    background: url("/img/try.jpg");
+    background-repeat: no-repeat;
+    background-position: left / cover;
+    background-size: cover;
     width: 100%;
     height: 230px;
 }
@@ -261,9 +265,9 @@ header{position: relative;}
 /* ------------- Animation -------------  */
 @keyframes modal-animShow{
     from {
-        left: -350px;
+        opacity: 0.2;
     }
     to {
-        left: 0;
+        opacity: 1;
     }
 }

@@ -6,16 +6,17 @@
 
     <main>   
         <section class="section__first">
-            <div class="firstContainer"></div>
+            <div class="firstContainer">
+
+            </div>
         </section>
         
         <section class="section__second">
             <div class="container__first--subSection">
-
             </div>
             
             <div class="container__second--subSection">
-
+                <canvas id="myChart" style="width: 100%; height: 100%;"></canvas>
             </div>
         </section>
         <section class="section__first">
@@ -41,9 +42,10 @@
             </div>
             
             <div class="container__second--subSection">
-
             </div>
         </section>
     </main>
 
-    <%- include('./partials/footer.ejs') %>
+    <script src="/js/chartjs/module.js" type="module"></script>
+
+<%- include('./partials/footer.ejs') %>
