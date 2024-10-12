@@ -5,37 +5,75 @@
 <%- include('../partials/header.ejs') %>
 
 <main>
-    <div class="container__userConnection">
-        <form id="register-form">
-            <h2>Join the Fitness Community</h2>
-            
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="off">
+    <form id="login-form">
+        <h2>Register</h2>
+        <div class="container__inputs">    
+            <div class="container">
+                <div class="container__name">
+                    <i class="fa-solid fa-user" id="user"></i>
+                    <input type="text" id="name" name="name" placeholder="Name" autocomplete="off">
+                </div>
+                <div class="container__lastname">
+                    <i class="fa-solid fa-user" id="userLast"></i>
+                    <input type="text" id="lastname" name="lastname" placeholder="Lastname" autocomplete="off">
+                </div>
             </div>
-            
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="off">
+
+            <div class="section-telephone">
+                    <select name="countryCode" id="countryCode">
+                        <option value="1">(+1-809) Argentina</option>
+                        <option value="2">(+54)</option>
+                        <option value="3">(+652)</option>
+                        <option value="4"></option>                        <option value="5"></option>
+                        <option value="6"></option>
+                        <option value="7"></option>
+                        <option value="8"></option>
+                        <option value="9"></option>
+                        <option value="10"></option>
+                        <option value="11"></option>
+                        <option value="12"></option>
+                    </select>
+                <div class="container__telephone">
+                    <i class="fa-solid fa-phone" id="tel"></i><input type="tel" id="telephone" name="telephone" placeholder="telephone">
+                </div>
             </div>
-            
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="off">
-            </div>
-            
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password:</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" autocomplete="off">
+
+            <div class="container__email">
+                <i class="fa-regular fa-envelope" id="envelope"></i><input type="text" id="email" name="email" placeholder="Email adress" autocomplete="off">
             </div>
         
-            <div class="form-group">
-                <input type="submit" value="Register">
+            <div class="container__password">
+                <i class="fa-solid fa-lock" id="lock"></i><input type="password" id="password" name="password" placeholder="Password" autocomplete="off">
             </div>
-        
-           <p class="terms">By registering, you agree to our <a href="#" class="terms-link">Terms and Conditions</a></p>
-        </form>
-    </div>
+
+            <div class="container__rememberMe">
+                <input type="checkbox" id="remember"><span class="remember-label">Remember me</span>
+            </div>
+        </div>
+
+        <div class="container__submit">
+            <button type="submit">Submit</button>
+        </div>
+
+        <div class="separator">
+            <hr class="line">
+            <p class="legend-or">or</p>
+            <hr class="line">
+        </div>
+
+        <div class="container__logIn--external">
+            <div class="container__google">
+                <button><img class="imgBtn" src="/img/svg/google.svg"><span class="icon-label">Google</span></button>
+            </div>
+            <div class="container__apple">
+                <button><img class="imgBtn" src="/img/svg/apple.svg"><span class="icon-label">Apple</span></button>
+            </div>
+        </div>
+
+        <span class="redirect__register">Already have account? <a href="/user/login">Log in</a></span>
+    </form>
 </main>
+
+<script src="/js/users/register.js"></script>
 
 <%- include('../partials/footer.ejs') %>

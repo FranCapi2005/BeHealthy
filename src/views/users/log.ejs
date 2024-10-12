@@ -6,29 +6,43 @@
 
 <main>
     <form id="login-form">
-        <h2>Login to Your Fitness Journey</h2>
-        <div class="form-group">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" autocomplete="off">
+        <h2>Log in with</h2>
+
+        <div class="container__logIn--external">
+            <div class="container__google">
+                <button><img class="imgBtn" src="/img/svg/google.svg"><span class="icon-label">Google</span></button>
+            </div>
+            <div class="container__apple">
+                <button><img class="imgBtn" src="/img/svg/apple.svg"><span class="icon-label">Apple</span></button>
+            </div>
         </div>
-        
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="off">
+
+        <div class="separator">
+            <hr class="line">
+            <p class="legend-or">or</p>
+            <hr class="line">
         </div>
+        <div class="container__inputs">    
+            <div class="container__email">
+                <i class="fa-regular fa-envelope" id="envelope"></i><input type="text" id="email" name="email" placeholder="Email adress" autocomplete="off">
+            </div>
         
-        <div class="form-group">
-            <input type="submit" value="Login">
+            <div class="container__password">
+                <i class="fa-solid fa-lock" id="lock"></i><input type="password" id="password" name="password" placeholder="Password" autocomplete="off">
+            </div>
+        </div>
+        <div class="container__forgotPassword">
             <a href="/user/forgot-password" class="forgot-password">Forgot Password?</a>
         </div>
         
-        <p class="or">or</p>
-        
-        <div class="social-login">
-            <a href="#" class="facebook-login">Login with Facebook</a>
-            <a href="#" class="google-login">Login with Google</a>
+        <div class="container__submit">
+            <button type="submit" value="login">Login</button>
         </div>
+
+        <span class="redirect__register">Don't have an account? <a href="/user/register">Sing up</a></span>
     </form>
 </main>
+
+<script src="/js/users/login.js"></script>
 
 <%- include('../partials/footer.ejs') %>

@@ -1,15 +1,8 @@
-/* ------------- Generales -------------  */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
-
-/* ------------- Reset Password -------------  */
-#reset-password-form {
-    width: 90%;
-    margin: 20px auto;
+/* ------------- Register -------------  */
+#login-form {
+    width: 70%;
+    height: 60vh;
+    margin: 15px auto;
     padding: 20px 30px 20px 30px;
     border: 1px solid #ddd;
     border-radius: 10px;
@@ -19,100 +12,190 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
-  
-#reset-password-form h2 {
+
+input{outline: none; transition: box-shadow .4s ease;}
+
+input:focus-visible{outline: 2px solid #5F41E4;}
+
+.container__email:focus-within i{color: #5F41E4;}
+.container__telephone:focus-within i{color: #5F41E4;}
+
+input:focus{box-shadow: 0 0 10px #5F41E4;}
+
+.container__inputs{
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container__submit{width: 90%;}
+
+.button {
+    --color: #fff;
+    --background: #5F41E4;
+    --height: 40px;
+    --width: 100%;
+    --icon: #fff;
+    padding: 0;
+    cursor: pointer;
     text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #333;
-    font-size: 18px;
-}
-  
-#reset-password-form .form-group {
-    margin-bottom: 20px;
     position: relative;
-    width: 100%;
-}
-  
-#reset-password-form label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-    color: #333;
-    font-size: 16px;
-}
-  
-#reset-password-form input[type="email"] {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-  
-#reset-password-form input[type="submit"] {
-    width: 100%;
-    height: 40px;
-    background-color: #6F86FF;
-    color: #fff;
-    padding: 8px;
     border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-}
-  
-#reset-password-form input[type="submit"]:hover {background-color: #41509e;}
-  
-#reset-password-form .login-link {
+    outline: none;
+    background: none;
+    appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    width: var(--width);
+    letter-spacing: .5px;
     font-size: 14px;
-    color: #6F86FF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-size: 16px;
+    font-weight: 500;
+    color: var(--color);
+    line-height: var(--height);
+    &:before,
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    &:before {
+        transform: translate(-50%, -50%);
+        width: var(--before-w, var(--width));
+        height: var(--before-h, var(--height));
+        border-radius: var(--before-r, 7px);
+        background: var(--background);
+        transform-origin: 50% 50%;
+        transition: width .3s, height .3s, border-radius .2s;
+        transition-delay: .2s;
+    }
+    &:after {
+        width: 16px;
+        height: 16px;
+        margin: -8px 0 0 -8px;
+        background: #5F41E4;
+        z-index: 2;
+        border-radius: 50%;
+        transform: scale(0);
+    }
+    span {
+        width: 100%;
+        z-index: 1;
+        display: block;
+        position: relative;
+        opacity: var(--span-o, 1);
+        transform: scale(var(--span-s, 1));
+        transition: opacity .3s, transform .2s;
+        transition-delay: .2s;
+    }
+    svg {
+        width: 15px;
+        height: 13px;
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        stroke: var(--icon);
+        stroke-width: 2px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        fill: none;
+        transform: translate(-50%, -50%);
+        stroke-dasharray: 17px;
+        stroke-dashoffset: var(--svg-o, 17px);
+        transition: stroke-dashoffset .3s ease;
+    }
+    &.processing {
+        --before-w: 41px;
+        --before-h: 41px;
+        --before-r: 22px;
+        --span-o: 0;
+        --span-s: .6;
+        --after-s: 1;
+        --svg-o: 34px;
+        &:before {
+            animation: pulse 3s linear forwards;
+        }
+        &:after {
+            animation: dot 3s linear forwards;
+        }
+        svg {
+            transition-delay: 3s;
+        }
+    }
 }
 
-#reset-password-form .login-link:hover {color: #41509e;}
-
-#reset-password-form .social-login {
-    margin-top: 20px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    position: relative;
-}
-
-#reset-password-form .social-login a {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
-    border-radius: 50%;
+#email, #telephone{
+    width: 100%;
+    height: 40px;
+    border: 2px solid #ddd;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    cursor: pointer;
+    padding: 5px 5px 5px 35px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
-.fa-google, .fa-facebook, .fa-apple{
+.container__email, .container__telephone{
+    position: relative;
+    margin: 10px 0;
+    width: 90%;
+}
+
+.fa-envelope, .fa-phone{
     position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 13.5px;
+    top: 30%;
+    color: #bbb;
 }
 
-#reset-password-form .social-login a:hover {background-color: #f7f7f7;}
-
-#reset-password-form .social-login a i {
-    font-size: 24px;
-    color: #337ab7;
+.separator{
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    width: 90%;
 }
 
-#reset-password-form .social-login a.google-login i {color: #dd4b39;}
+.line{
+    flex-grow: 1;
+    color: #1116;
+}
 
-#reset-password-form .social-login a.facebook-login i {color: #3b5998;}
+.line:first-child{margin: 0 10px 0 0;}
 
-#reset-password-form .social-login a.apple-login i {color: #222;}
+.line:last-child{margin: 0 0 0 10px;}
+
+@keyframes pulse {
+    4% {
+        transform: translate(-50%, -50%) scaleX(1.1);
+    }
+    8% {
+        transform: translate(-50%, -50%);
+    }
+    24%,
+    56%,
+    88% {
+        transform: translate(-50%, -50%) scale(.8);
+    }
+    40%,
+    72% {
+        transform: translate(-50%, -50%) scale(1.2);
+    }
+}
+
+@keyframes dot {
+    8% {
+        transform: scale(0);
+    }
+    16% {
+        transform: scale(1) rotate(30deg) translateX(48px);
+    }
+    95% {
+        transform: scale(1) rotate(1000deg) translateX(48px);
+    }
+    100% {
+        transform: scale(.125) rotate(1050deg) translate(52px, -6px);
+    }
+}
