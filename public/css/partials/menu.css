@@ -1,7 +1,7 @@
 /* ------------- Header -------------  */
 body.no-scrollBar{overflow: hidden;}
 
-header{position: relative;}
+header{position: relative; margin-top: 15px;}
 
 .nav-bar{
     display: flex;
@@ -19,7 +19,7 @@ header{position: relative;}
     border: 1px solid #ddd;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 8px;
-    margin: 15px 10px;
+    margin: 0 5px 10px 10px;
     transition: background-color .7s ease;
 }
 
@@ -28,7 +28,7 @@ header{position: relative;}
 .container__topMenu{
     justify-content: end;
     flex: 2 1;
-    margin: 15px 10px;
+    margin: 0 10px 0 5px;
     padding: 0;
 }
 
@@ -86,11 +86,6 @@ header{position: relative;}
     border-bottom: 3px solid transparent;
     transition: border-bottom .4s, background-color .4s ease;
     cursor: pointer;
-}
-
-.list__menu .item:hover{
-    background-color: #6F86FF60;
-    border-bottom: 3px solid #5F41E4;
 }
 
 

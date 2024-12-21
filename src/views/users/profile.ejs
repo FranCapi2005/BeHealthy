@@ -1,0 +1,276 @@
+<%- include('../partials/head.ejs') %>
+
+<link rel="stylesheet" href="/css/users/profile.css">
+<main>
+    <section class="section--profile">
+        
+        <div class="container__headProfile">
+            <a href="/">
+                <div class="container__backPreviousPage">
+                    <i class="fa-solid fa-house"></i>
+                </div>
+            </a>
+            
+            <button class="btnOpen--modalWindowInfo">
+                    <img src="/img/try.jpg" class="userProfile--img">
+                    <span class="username">Francisco Capitani</span>
+            </button>
+        </div>
+        
+        <div class="container__extraBtn">
+            <div class="container__btnComunity">
+                <a href="">
+                    <div class="container__titles">
+                        <span>Comunidad</span>
+                    </div>
+                    
+                    <div class="container__icon">
+                        <img src="/img/house.png" class="imgComunity">
+                    </div>
+                </a>
+            </div>
+            
+            <div class="container__btnHelp">
+                <a href="">
+                    <div class="container__titles">
+                        <span>Contact Us</span>
+                    </div>
+                    
+                    <div class="container__icon">
+                        <img src="/img/question-mark.png" class="imgHelp">
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <h3 class="title--data">Datos Generales</h3>
+        
+        <div class="generalData">
+            <div class="container">
+                <!-- Logros de la App -->
+                <i class="fa-solid fa-trophy"></i>
+                <button class="btnOpen--modalWindow-Achivement">Logros</button>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <!-- Datos de usuario (peso, kcal, proteina, macros diarios, agua) -->
+                <i class="fa-solid fa-chart-simple"></i>
+                <button class="btnOpen--modalWindow-DataUser">Mis Datos</button>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <!-- Recompensas en puntos -->
+                <i class="fa-solid fa-gift"></i>
+                <button class="btnOpen--modalWindow-Reward">Recompensas</button>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <!-- Planes propios de ejercicio -->
+                <i class="fa-solid fa-book-bookmark"></i>
+                <button class="btnOpen--modalWindow-Plan">Planes</button>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <!-- Registro de actividades -->
+                <i class="fa-solid fa-dumbbell"></i>
+                <button class="btnOpen--modalWindow-Activitie">Actividades</button>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <!-- Datos personales de Usuario (nombre, apellido, email, contraseña, etc) -->
+                <i class="fa-regular fa-address-book"></i>
+                <button class="btnOpen--modalWindow-Perfil">Perfil</button>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+        
+        <h3 class="title--data">Otros</h3>
+
+        <div class="otherData">    
+            <div class="container">
+                <i class="fa-solid fa-gear"></i>
+                <span>Ajustes</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Mi Privacidad</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <i class="fa-regular fa-circle-question"></i>
+                <span>Ayuda</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <i class="fa-solid fa-people-carry-box"></i>
+                <span>Servicios de Terceros</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            
+            <div class="container">
+                <i class="fa-regular fa-circle-exclamation"></i>
+                <span>Acerca de</span>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </div>
+        
+
+        <dialog id="modalWindowEssential">
+            <div class="container__modalWindow">
+                <div class="btnClose--modalWindowInfo">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </div>
+                <div class="container__modalUser">
+                    <div class="index--Imgwindow">
+                        <img class="imgProfileSecond" src="/img/try.jpg" alt="">
+                    </div>
+                </div>
+                <div class="container__index--window">
+                    <div class="index--window">
+                        <details id="details">
+                            <summary id="summary">Informacion Personal</summary>
+                            <div class="index--window">
+                                <label>Nombre:</label>
+                                <input type="text" class="name" value="Francisco" disabled>
+                            </div>
+
+                            <div class="index--window">
+                                <label>Apellido:</label>
+                                <input type="text" class="lastname" value="Capitani" disabled>
+                            </div>
+                            
+                            <div class="index--window">
+                                <label>Email:</label>
+                                <input type="email" class="email" value="ftcapitani@gmail.com" disabled>
+                            </div>
+                            
+                            <div class="index--window">
+                                <label>Telefono:</label>
+                                <input type="tel" class="telephone" value="+5491123456789" disabled>
+                            </div>
+                            
+                            <div class="index--window">
+                                <label>Pais:</label>
+                                <input type="text" class="country" value="Argentina" disabled>
+                            </div>
+
+                            <div class="btn-index--window">
+                                <button class="edit--data">edit information</button>
+                            </div> 
+                        </details>
+                    </div>
+                </div>
+                <div class="separator2">
+                    <hr class="line">
+                    <p class="legend-or"></p>
+                    <hr class="line">
+                </div>
+                    <div class="index--window">
+                        <details id="details">
+                            <summary id="summary">Seguridad de la Cuenta</summary>
+                            <div class="index--windowR">
+                                    <div class="cont" id="btnOpenWindow-token">
+                                        <div>
+                                            <span>Token</span>
+                                            <span class="tokenC txt" id="tokenC-txt">faiwbu74841bfaiwy648251niofua934922</span>
+                                        </div>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+
+                                <div class="cont">
+                                    <div>
+                                        <span>Telefono</span>
+                                        <span class="txt">+549 11 2341-8022</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+
+                                <div class="cont">
+                                    <div>
+                                        <a href="#"><span>Correo</span></a>
+                                        <span class="email-txt txt" id="email-txt">ftcapitani@gmail.com</span>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="separator">
+                                <hr class="line">
+                                <p class="legend-or"></p>
+                                <hr class="line">
+                            </div>
+                            <div class="index--windowR">
+                                <div class="cont cont2">
+                                    <div class="cont3">
+                                        <span>Numero de telefono y direccion de correo de seguridad</span>
+                                        <p>Sin numero de contacto asociado</p>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                                <div class="cont cont2">
+                                    <div class="cont3">
+                                        <span>Contactos de Emergencia</span>
+                                        <p>Le puede ayudar a resetear y recuperar acceso a su cuenta en caso de perdida</p>
+                                    </div>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                            <div class="separator">
+                                <hr class="line">
+                                <p class="legend-or"></p>
+                                <hr class="line">
+                            </div>
+                            <div class="index--windowR">
+                                <a href="/user/forgot-password">
+
+                                    <div class="cont">
+                                        <span>Cambiar Contraseña</span>
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </div>
+                                </a>
+                                <div class="cont2">
+                                    <div>
+                                        <span>Verificacion en dos pasos</span>
+                                        <div class="cont verifyTwoFactor">
+                                            <p>Cuando esto se habilita, su cuenta poseera un nivel superior de seguridad. Se le pedira el paso de verificacion cada vez que Inicie Sesion</p>
+                                            <div class="container__switch">
+                                                <input type="checkbox" value="1" class="switch">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cont">
+                                    <span>Lista Dispositivos</span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </div>
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="separator2">
+                        <hr class="line">
+                        <p class="legend-or"></p>
+                        <hr class="line">
+                    </div>
+                    <div class="index--window">
+                        <details>
+                            <summary>Centro de Privacidad</summary>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum odit temporibus veniam, et pariatur commodi animi soluta illum id, perferendis natus praesentium eligendi laborum, voluptatibus quidem earum reprehenderit dicta quo laboriosam! Laudantium obcaecati nulla deleniti recusandae enim odio ad illo corrupti dolore ex sunt, doloribus qui hic aperiam laborum libero labore ullam quae! Deserunt mollitia sint at nostrum qui rerum dolor tempora ducimus corrupti dolores explicabo fugit magnam vitae aut nobis, quidem atque autem. Eaque sed consequuntur, voluptate provident ipsa a accusantium praesentium, illum qui iste deleniti! Culpa, sapiente molestias! Possimus culpa omnis accusamus eos est laboriosam error maxime earum dolor laudantium, consequuntur dolorum, consectetur voluptatibus obcaecati fuga veritatis quod amet ad eaque blanditiis! Repellat earum harum aliquam praesentium, nihil veritatis, ex unde, magni maiores sed iste ratione soluta a tenetur quas maxime. Eos ipsa qui unde in nulla est, esse sint natus eius quis exercitationem, veritatis soluta totam enim dolorem at iste dolorum maiores mollitia porro assumenda a sed labore! Fugiat tempore provident doloribus deserunt reprehenderit, modi voluptates quisquam maiores harum quidem odio voluptate eligendi molestias hic mollitia suscipit ea eos ex nostrum at obcaecati iste voluptas sunt. Modi ullam odio deleniti laudantium necessitatibus, molestiae debitis officiis porro. Quidem?</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </dialog>
+    </section>
+</main>
+
+
+<script src="/js/users/profile.js"></script>

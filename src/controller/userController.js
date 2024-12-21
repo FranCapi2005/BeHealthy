@@ -9,6 +9,9 @@ const controller = {
     },
     fpass: (require, response) => {
         response.render("users/fpass.ejs");
+    },
+    detail: (require, response) => {
+        response.render("users/profile.ejs")
     }
 }
 
