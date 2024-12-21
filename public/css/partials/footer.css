@@ -8,6 +8,7 @@ footer{
     margin: 15px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .container__firstInfo--footer, .container__secondInfo--footer, .container__thirdInfo--footer{
